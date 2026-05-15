@@ -6,6 +6,6 @@ import lombok.Data;
 public class UsuarioCadastroDTO {
 
     private String nome;
-    private Integer sobrenome;
+    private String sobrenome;
     private String hash;
 }
