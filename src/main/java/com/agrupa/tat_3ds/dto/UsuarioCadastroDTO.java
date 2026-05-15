@@ -6,6 +6,6 @@ import lombok.Data;
 public class UsuarioCadastroDTO {
 
     private String nome;
-    private String sobrenome;// 1° Erro
+    private String sobrenome;// 1° Erro encontrado
     private String hash;
 }
