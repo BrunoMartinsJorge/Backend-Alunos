@@ -8,11 +8,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Tat3dsApplication {
 
     public static void main(String[] args) {
-        if (java.awt.Window.getWindows().length == 0) {
+        if (!java.awt.GraphicsEnvironment.isHeadless()) {
             DatabaseManagerSwing.main(new String[] {
                     "--url", "jdbc:hsqldb:mem:testdb",
                     "--user", "SA",
-                    "--password", ""
+                    "--password", "",
+                    "--noexit"
             });
         }
         SpringApplication.run(Tat3dsApplication.class, args);
